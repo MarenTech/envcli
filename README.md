@@ -21,13 +21,47 @@ npm install -g envcli
 envcli set <key> <value> [--type=string|boolean|number|array]
 ```
 
-Example:
+Example Bash Commands :
+
+## String
 ```bash
-envcli set API_URL https://api.example.com
-envcli set DEBUG true --type=boolean
-envcli set PORT 3000 --type=number
-envcli set ALLOWED_HOSTS localhost,127.0.0.1 --type=array
+envcli set greeting "Hello World"
 ```
+
+## Number
+```bash
+envcli set port 3000 number
+```
+
+## Boolean
+```bash
+envcli set debug_mode true boolean
+```
+
+## Array
+```bash
+cli set allowed_users '["john","mary","alex"]' array
+```
+
+Or
+
+```bash
+cli set allowed_domains example.com,test.com,demo.com array
+```
+
+
+## Object/Map
+
+```bash
+cli set database_config '{"host":"localhost","port":5432,"user":"admin"}' object
+```
+
+Or
+
+```bash
+cli set app_config '{"server":{"port":3000},"cache":{"enabled":true}}' object
+```
+
 
 ### Get Environment Variables
 ```bash
